@@ -93,7 +93,7 @@ int main(){
 			std::cout << "Separated Aperiodic Signal: " << PASFxa << std::endl;
 		}
 		// Output results
-		ofs << t << " " << x << " " << xp << " " << xa << " " << PASFxp << " " << PASFxa << " " << xp-PASFxp << std::endl;
+		ofs << t << " " << x << " " << xp << " " << xa << " " << p  << " " << PASFxp << " " << PASFxa << std::endl;
 
 		t += Ts;
 
