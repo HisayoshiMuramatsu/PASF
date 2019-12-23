@@ -18,6 +18,8 @@ int main(){
 	const double w0 = 4.0*M_PI;
 	// Time, signal, periodic signal, aperiodic signal, period
 	double t(0.0), x(0.0), xp(0.0), xa(0.0), T(0.0);
+	// Variable for count
+	int DisplayCount(0);
 
 	/*
 	* PASF
@@ -86,12 +88,14 @@ int main(){
 		pa.Separation(x, &PASFxp, &PASFxa, p, T);
 
 		// Display results
-		if((int)(t/Ts)%(int)(1/Ts) == 0) {
-			std::cout << "---------------- " << (int) t << " s" << " ----------------" << std::endl;
+		if(DisplayCount == 0 || DisplayCount == (int)(1/Ts)) {
+			std::cout << "---------------- " << t << " s" << " ----------------" << std::endl;
 			std::cout << "Separation Frequency      : " << p      << std::endl;
 			std::cout << "Separated Periodic Signal : " << PASFxp << std::endl;
 			std::cout << "Separated Aperiodic Signal: " << PASFxa << std::endl;
+			DisplayCount = 0;
 		}
+		DisplayCount++;
 		// Output results
 		ofs << t << " " << x << " " << xp << " " << xa << " " << p  << " " << PASFxp << " " << PASFxa << std::endl;
 
