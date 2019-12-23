@@ -16,8 +16,8 @@ PASF::PASF(
 	    double IN_Ts
 	):xp(IN_xp0), xa(IN_xa0), MaxPeriod(IN_MaxPeriod), Ts(IN_Ts)
 {
-	Delaycount1 = 1;
-	Delaycount2 = 1;
+	Delaycount1 = 0;
+	Delaycount2 = 0;
 	std::vector<double> Memory1((int)((MaxPeriod+0.1)/Ts));
 	DelayMemory1 = Memory1;
 	std::vector<double> Memory2((int)((MaxPeriod+0.1)/Ts));
@@ -28,7 +28,7 @@ void PASF::Separation(double x, double* OUT_xp, double* OUT_xa, double p, double
 	double xd(0.0), xpd(0.0);
 
 	xd  = Delay1(x, T);
-	xpd = Delay2(xp, T);
+	xpd = Delay2(xp, T-Ts);
 	xp  = -(T*p-2)/(T*p+2)*xpd + (T*p)/(T*p+2)*(x+xd);
 	xa  = x - xp;
 
@@ -43,7 +43,7 @@ double PASF::Delay1(double z, double T){
 	Output = DelayMemory1[Delaycount1];
 	DelayMemory1[Delaycount1] = z;
 	Delaycount1++;
-	if(Delaycount1==(int)(T/Ts)) Delaycount1=1;
+	if(Delaycount1==(int)(T/Ts)) Delaycount1=0;
 
 	return Output;
 }
@@ -54,7 +54,7 @@ double PASF::Delay2(double z, double T){
 	Output = DelayMemory2[Delaycount2];
 	DelayMemory2[Delaycount2] = z;
 	Delaycount2++;
-	if(Delaycount2==(int)(T/Ts)) Delaycount2=1;
+	if(Delaycount2==(int)(T/Ts)) Delaycount2=0;
 
 	return Output;
 }
