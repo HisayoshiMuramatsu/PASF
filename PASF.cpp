@@ -12,8 +12,8 @@
 PASF::PASF(
 		double IN_xp0,
 		double IN_xa0,
-	    double IN_MaxPeriod,
-	    double IN_Ts
+		double IN_MaxPeriod,
+		double IN_Ts
 	):xp(IN_xp0), xa(IN_xa0), MaxPeriod(IN_MaxPeriod), Ts(IN_Ts)
 {
 	Delaycount1 = 0;
