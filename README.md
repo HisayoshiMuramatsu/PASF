@@ -16,7 +16,7 @@ The PASF can be used for control engineering, which realizes periodic/aperiodic 
 
 ## Example
 
-There is a test program that simulates the real-time signal processing, where the PASF separates a signal including a periodic signal (constant and harmonic element) and aperiodic signals (white and impulse noise).
+There is a test program that simulates the real-time signal processing, where the PASF separates a signal including a periodic signal (constant and harmonic elements) and aperiodic signals (white and impulse noise).
 
 ## Licence
 
