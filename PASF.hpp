@@ -10,21 +10,17 @@
 class PASF{
 public:
 	PASF(
-		// Initial periodic signal
-	    double IN_xp0,
-		// Initial aperiodic signal
-	    double IN_xa0,
-	    // Maximum period
-	    double IN_MaxPeriod,
+	    // Period
+	    double IN_T,
 	    // Sampling time
 	    double IN_Ts
 	);
 	// Separation of signal into periodic and aperiodic signals
-	void Separation(double x, double* xp, double* xa, double p, double T);
+	void Separation(double x, double* xp, double* xa, double p);
 
 private:
 	// Variables
-	double xp, xa, MaxPeriod, Ts;
+	double xp, xa, T, Ts;
 	int Delaycount1, Delaycount2;
 	std::vector<double> DelayMemory1, DelayMemory2;
 	// Functions

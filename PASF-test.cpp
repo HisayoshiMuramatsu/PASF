@@ -16,20 +16,16 @@ int main(){
 	const double Ts = 0.0001;
 	// Fundamental frequency of a periodic signal [rad/s]
 	const double w0 = 4.0*M_PI;
-	// Time, signal, periodic signal, aperiodic signal, period
-	double t(0.0), x(0.0), xp(0.0), xa(0.0), T(0.0);
+	// Period of periodicity [s]
+	const double T = 2.0*M_PI/w0;
+	// Time, signal, periodic signal, aperiodic signal
+	double t(0.0), x(0.0), xp(0.0), xa(0.0);
 	// Variable for count
 	int DisplayCount(0);
 
 	/*
 	* PASF
 	*/
-	// Initial periodic signal
-	const double xp0 = 0.0;
-	// Initial aperiodic signal
-	const double xa0 = 0.0;
-	// Maximum period [s]
-	const double MaxPeriod = 10;
 	 // Separated periodic signal, separated aperiodic signal, separation frequency
 	double PASFxp(0.0), PASFxa(0.0), p;
 
@@ -44,7 +40,7 @@ int main(){
 	std::cout << "=====================================" << std::endl;
 
 	// Construct the PASF
-	PASF pa(xp0, xa0, MaxPeriod, Ts);
+	PASF pa(T, Ts);
 
 	/**
 	* Real-time signal processing simulation
@@ -79,13 +75,14 @@ int main(){
 		/**
 		* PASF
 		*/
+		// Separation frequency
 		if (t < 20.0){
 			p = 1.0;
 		}else{
 			p = 0.01;
 		}
-		T = 2.0*M_PI/w0;
-		pa.Separation(x, &PASFxp, &PASFxa, p, T);
+		// Filtering
+		pa.Separation(x, &PASFxp, &PASFxa, p);
 
 		// Display results
 		if(DisplayCount == 0 || DisplayCount == (int)(1/Ts)) {

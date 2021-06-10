@@ -10,21 +10,17 @@
 #include "PASF.hpp"
 
 PASF::PASF(
-		double IN_xp0,
-		double IN_xa0,
-		double IN_MaxPeriod,
+		double IN_T,
 		double IN_Ts
-	):xp(IN_xp0), xa(IN_xa0), MaxPeriod(IN_MaxPeriod), Ts(IN_Ts)
+	):T(IN_T), Ts(IN_Ts), xp(0), xa(0), Delaycount1(0), Delaycount2(0)
 {
-	Delaycount1 = 0;
-	Delaycount2 = 0;
-	std::vector<double> Memory1((int)((MaxPeriod+0.1)/Ts));
+	std::vector<double> Memory1((int)(T/Ts));
 	DelayMemory1 = Memory1;
-	std::vector<double> Memory2((int)((MaxPeriod+0.1)/Ts));
+	std::vector<double> Memory2((int)(T/Ts));
 	DelayMemory2 = Memory2;
 }
 
-void PASF::Separation(double x, double* OUT_xp, double* OUT_xa, double p, double T){
+void PASF::Separation(double x, double* OUT_xp, double* OUT_xa, double p){
 	double xd(0.0), xpd(0.0);
 
 	xd  = Delay1(x, T);
