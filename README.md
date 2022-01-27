@@ -2,11 +2,11 @@
 
 This is a real-time signal processing algorithm in C++. It implements the filter proposed by [1] and [2]. The first-order periodic/aperiodic separation filter (PASF) has the following three characteristics.
 
-1. Separation of a signal into periodic and aperiodic signals
-2. Real-time processing caused by the simple structure
-3. Linearity which enables linear analyses and control
+1. Separation of a signal into quasi-periodic and quasi-aperiodic signals
+2. Real-time processing with the simple structure
+3. Linearity that enables linear analyses and control
 
-The PASF can be used for control engineering, which realizes periodic/aperiodic state feedback control and periodic/aperiodic motion control.
+The PASF can be used for harmonic noise elimination and periodic/aperiodic separation control.
 
 [1] Hisayoshi Muramatsu and Seiichiro Katsura, “Periodic/Aperiodic Motion Control Using Periodic/Aperiodic Separation Filter,” IEEE Transactions on Industrial Electronics, vol. 67, no. 9, pp. 7649-7658, Sep. 2020.
 (https://ieeexplore.ieee.org/abstract/document/8858034)
@@ -16,7 +16,7 @@ The PASF can be used for control engineering, which realizes periodic/aperiodic 
 
 ## Example
 
-There is a test program that simulates the real-time signal processing, where the PASF separates a signal including a periodic signal (constant and harmonic elements) and aperiodic signals (white and impulse noise).
+There is a test program that simulates the real-time signal processing, where the PASF separates the signal including the quasi-periodic signal (constant and harmonics) and quasi-aperiodic signals (white and impulse like noise).
 
 ## Licence
 
