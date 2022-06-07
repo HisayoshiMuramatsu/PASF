@@ -1,6 +1,6 @@
 # PASF - First-Order Periodic/Aperiodic Separation Filter
 
-This is a real-time signal processing algorithm in C++. It implements the first-order periodic/aperiodic separation filter (PASF) proposed by [2]. The general PASF was proposed in [1], and the definitions, characteristics, and advanced design are described in [3]. The first-order PASF has the following three characteristics.
+This is a real-time signal processing algorithm in C++. It implements the first-order periodic/aperiodic separation filter (PASF) used in [2]. The PASF was proposed in [1], and the definitions, characteristics, and advanced design are described in [3]. The first-order PASF has the following three characteristics.
 
 1. Separation of a signal into quasi-periodic and quasi-aperiodic signals
 2. Real-time processing with the simple structure
