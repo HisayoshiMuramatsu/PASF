@@ -9,7 +9,7 @@ This is a real-time signal processing algorithm in C++. It implements the first-
 The PASF can be used for harmonic noise elimination and periodic/aperiodic separation control.
 
 [1] Hisayoshi Muramatsu, “Separation and Estimation of Periodic/Aperiodic State,” Automatica, vol. 140, Jun. 2022.
-(https://www.sciencedirect.com/science/article/pii/S000510982200108X?via%3Dihub)
+(https://www.sciencedirect.com/science/article/pii/S000510982200108X?via%3Dihub) (arXiv: https://arxiv.org/abs/2202.07937)
 
 [2] Hisayoshi Muramatsu and Seiichiro Katsura, “Periodic/Aperiodic Motion Control Using Periodic/Aperiodic Separation Filter,” IEEE Transactions on Industrial Electronics, vol. 67, no. 9, pp. 7649-7658, Sep. 2020.
 (https://ieeexplore.ieee.org/abstract/document/8858034)
