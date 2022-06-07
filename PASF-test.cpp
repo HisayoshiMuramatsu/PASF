@@ -88,8 +88,8 @@ int main(){
 		if(DisplayCount == 0 || DisplayCount == (int)(1/Ts)) {
 			std::cout << "---------------- " << t << " s" << " ----------------" << std::endl;
 			std::cout << "Separation Frequency      : " << p      << std::endl;
-			std::cout << "Separated Periodic Signal : " << PASFxp << std::endl;
-			std::cout << "Separated Aperiodic Signal: " << PASFxa << std::endl;
+			std::cout << "Separated Quasi-Periodic Signal : " << PASFxp << std::endl;
+			std::cout << "Separated Quasi-Aperiodic Signal: " << PASFxa << std::endl;
 			DisplayCount = 0;
 		}
 		DisplayCount++;
