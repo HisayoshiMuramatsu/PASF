@@ -1,6 +1,6 @@
 # PASF - First-Order Periodic/Aperiodic Separation Filter
 
-This is a real-time signal processing algorithm in C++. It implements the first-order periodic/aperiodic separation filter (PASF) used in [2]. The PASF was proposed in [1], and the definitions, characteristics, and advanced design are described in [3]. The first-order PASF has the following three characteristics.
+This is a real-time signal processing algorithm in C++. It implements the first-order periodic/aperiodic separation filter (PASF) used in [1]. The PASF was proposed in [2], and the definitions, characteristics, and advanced design are described in [3]. The first-order PASF has the following three characteristics.
 
 1. Separation of a signal into quasi-periodic and quasi-aperiodic signals
 2. Real-time processing with the simple structure
@@ -8,14 +8,15 @@ This is a real-time signal processing algorithm in C++. It implements the first-
 
 The PASF can be used for harmonic noise elimination and periodic/aperiodic separation control.
 
-[1] Hisayoshi Muramatsu, “Separation and Estimation of Periodic/Aperiodic State,” Automatica, vol. 140, Jun. 2022.
-(https://www.sciencedirect.com/science/article/pii/S000510982200108X?via%3Dihub) (arXiv: https://arxiv.org/abs/2202.07937)
 
-[2] Hisayoshi Muramatsu and Seiichiro Katsura, “Periodic/Aperiodic Motion Control Using Periodic/Aperiodic Separation Filter,” IEEE Transactions on Industrial Electronics, vol. 67, no. 9, pp. 7649-7658, Sep. 2020.
+[1] Hisayoshi Muramatsu and Seiichiro Katsura, “Periodic/Aperiodic Motion Control Using Periodic/Aperiodic Separation Filter,” IEEE Transactions on Industrial Electronics, vol. 67, no. 9, pp. 7649-7658, Sep. 2020.
 (https://ieeexplore.ieee.org/abstract/document/8858034)
 
-[3] Hisayoshi Muramatsu and Seiichiro Katsura, “Separated Periodic/Aperiodic State Feedback Control Using Periodic/Aperiodic Separation Filter Based on Lifting,” Automatica, vol. 101, pp. 458-466, Mar. 2019.
+[2] Hisayoshi Muramatsu and Seiichiro Katsura, “Separated Periodic/Aperiodic State Feedback Control Using Periodic/Aperiodic Separation Filter Based on Lifting,” Automatica, vol. 101, pp. 458-466, Mar. 2019.
 (https://www.sciencedirect.com/science/article/pii/S0005109818306307)
+
+[3] Hisayoshi Muramatsu, “Separation and Estimation of Periodic/Aperiodic State,” Automatica, vol. 140, Jun. 2022.
+(https://www.sciencedirect.com/science/article/pii/S000510982200108X?via%3Dihub) (arXiv: https://arxiv.org/abs/2202.07937)
 
 ## Example
 
