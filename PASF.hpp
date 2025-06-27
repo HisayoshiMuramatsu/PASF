@@ -20,7 +20,7 @@ public:
 
 private:
 	// Variables
-	double xp, xa, T, Ts;
+	double T, Ts, xp, xa;
 	int Delaycount1, Delaycount2;
 	std::vector<double> DelayMemory1, DelayMemory2;
 	// Functions
